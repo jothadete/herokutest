@@ -29,4 +29,9 @@ Postman: GET 127.0.0.1:5000/user/Nicholas
 Test mit Postman erfolgreich.
 Laden mit JQuery scheitert an CORS policy.
 
+18. pip install flask-cors. Update requirements.txt. app.py angepasst (import flask-cors, dann CORS(app)).
+
+Test mit JQuery (lokale Html-Datei) erfolgreich.
+
+
 
