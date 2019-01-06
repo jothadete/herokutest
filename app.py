@@ -26,7 +26,7 @@ users = [
 
 class User(Resource):
 
-	def get(self, name):
+	def get(selunable to load configuration from uwsgif, name):
 		for user in users:
 			if(name == user["name"]):
 				return user, 200
@@ -81,5 +81,7 @@ class User(Resource):
 
 api.add_resource(User, "/user/<string:name>")
 
-app.run(port=5000, debug=True)
+
+if __name__ = "__main__":
+  app.run(port=5000, debug=True)
 
