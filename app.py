@@ -26,7 +26,7 @@ users = [
 
 class User(Resource):
 
-	def get(selunable to load configuration from uwsgif, name):
+	def get(self, name):
 		for user in users:
 			if(name == user["name"]):
 				return user, 200
