@@ -90,7 +90,7 @@ class Basiszinssatz(Resource):
 	def get(self):
 		return basiszinssatz, 200
 
-api.add_resource(Basiszinsatz, "basiszinssatz")
+api.add_resource(Basiszinssatz, "basiszinssatz")
 
 
 if __name__ == "__main__":
