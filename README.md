@@ -1,4 +1,4 @@
-## REST-API mit Flask
+## REST-API mit Flask auf Heroku
 Nach dem Artikel auf Codeburst von Leon Wee: www.codeburst.io/@leonweecs
 
 1. virtualenv venv
@@ -24,3 +24,9 @@ Postman: GET 127.0.0.1:5000/user/Nicholas
 14. uWSGI nicht lokal installiert, aber in requirements.txt aufnehmen.
 15. uwsgi.ini - Port - Der Port wird von Heroku gelesen - $(Port), Masterprozess, Module - hier wird das Module (app.py) und die Variable angegeben (app).
 16. Procfile - Welche "Dyno"? Hier vom Typ "web". Welcher Prozess? Hier z. B. Python - hier aber uWSGI-Prozess, dieser startet dann Flask.
+17. Heroku - Repository nach Upload verbunden.
+
+Test mit Postman erfolgreich.
+Laden mit JQuery scheitert an CORS policy.
+
+
