@@ -82,6 +82,6 @@ class User(Resource):
 api.add_resource(User, "/user/<string:name>")
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
   app.run(port=5000, debug=True)
 
