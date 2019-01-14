@@ -138,6 +138,10 @@ class RVG_Wertgeb(Resource):
 		return rvg_wertgeb, 200
 api.add_resource(RVG_Wertgeb, "/rvgwert")
 
+class GKG_Wertgeb(Resource):
+	def get(self):
+		return gkg_wertgeb, 200
+api.add_resource(GKG_Wertgeb, "/gkgwert")
 
 if __name__ == "__main__":
   app.run(port=5000, debug=True)
