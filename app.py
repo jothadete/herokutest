@@ -61,7 +61,7 @@ basiszinssatz = {"basiszinssatz":[
 	{"from":"2018-01-01", "till":"2018-06-30", "value":-0.0088},
 	{"from":"2018-07-01", "till":"2018-12-31", "value":-0.0088},
 	{"from":"2019-01-01", "till":"2019-06-30", "value":-0.0088},
-        {"from":"2019-07-01", "till":"2019-12-31", "value":-0.0088}
+        {"from":"2019-07-01", "till":"2019-12-31", "value":-0.0088},
 ]}
 
 rvg_wertgeb = {"rvg_wertgeb":[
