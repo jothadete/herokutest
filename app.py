@@ -162,8 +162,9 @@ class Relay(Resource):
 		parser.add_argument("page")
 		parser.add_argument("sortedby") #Datum
 		args = parser.parse_args()
-		url = "https://www.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl"
-		x = requests.post(url, data = args)
+		##url = "https://www.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl"
+		##x = requests.post(url, data = args)
+		x = requests.get("https://google.com")
 		return x, 200
 api.add_resource(Relay, "/inso")
 
