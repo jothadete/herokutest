@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS
 
@@ -144,6 +144,44 @@ class GKG_Wertgeb(Resource):
 	def get(self):
 		return gkg_wertgeb, 200
 api.add_resource(GKG_Wertgeb, "/gkgwert")
+
+
+class Relay(Resource):
+	def post(self):
+		parser = reqparse.RequestParser()
+		parser.add_argument("Suchfunktion") #must be detail
+		parser.add_argument("Bundesland")
+		parser.add_argument("Gericht")
+		parser.add_argument("Name")
+		parser.add_argument("Sitz")
+		parser.add_argument("Abteilungsnr")
+		parx = requests.post(url, data = myobj)ser.add_argument("Registerzeichen")
+		parser.add_argument("Lfdnr")
+		parser.add_argument("Jahreszahl")
+		parser.add_argument("matchesperpage") #100
+		parser.add_argument("page")
+		parser.add_argument("sortedby") #Datum
+		args = parser.parse_args()
+		url = "https://www.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl"
+		x = requests.post(url, data = args)
+		return x, 200
+api.add_resource(Relay, "/inso")
+
+'''
+Suchfunktion: detail
+Absenden: Suche starten
+Bundesland: Niedersachsen
+Gericht: (unable to decode value)
+Datum1: 01.01.2001
+Datum2: 26.11.2019
+Name: (unable to decode value)
+Sitz: (unable to decode value)
+Abteilungsnr: 
+Registerzeichen: --
+Lfdnr: 
+Jahreszahl: -- 
+'''
+
 
 if __name__ == "__main__":
   app.run(port=5000, debug=True)
