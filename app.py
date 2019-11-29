@@ -155,7 +155,7 @@ class Relay(Resource):
 		parser.add_argument("Name")
 		parser.add_argument("Sitz")
 		parser.add_argument("Abteilungsnr")
-		parx = requests.post(url, data = myobj)ser.add_argument("Registerzeichen")
+		parser.add_argument("Registerzeichen")
 		parser.add_argument("Lfdnr")
 		parser.add_argument("Jahreszahl")
 		parser.add_argument("matchesperpage") #100
