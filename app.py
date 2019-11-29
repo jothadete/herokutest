@@ -147,7 +147,6 @@ api.add_resource(GKG_Wertgeb, "/gkgwert")
 
 
 class Relay(Resource): 
-
 	def get(self):
         x = requests.get("https://www.google.com")
 		return x, 200
@@ -168,6 +167,7 @@ class Relay(Resource):
 		args = parser.parse_args()
 		url = "https://www.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl"
 		x = requests.post(url, data = args)
+		return x, 200
 api.add_resource(Relay, "/inso")
 
 '''
